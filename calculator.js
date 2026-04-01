@@ -216,3 +216,7 @@ After completing all TODOs, test your calculator:
 import { add, subtract, multiply, divide } from "./utils/operation.js";
 import { parseNumbers, isValidOperation } from "./utils/parser.js";
 import lodash from "lodash";
+
+const operation = process.argv[2];
+const numbers = process.argv.slice(3);
+
