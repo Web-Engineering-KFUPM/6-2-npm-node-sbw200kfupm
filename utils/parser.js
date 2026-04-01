@@ -1,9 +1,12 @@
-import lodash from "lodash"
+import _ from "lodash"
 
 export function parseNumbers(input) {
-            return {numbers: lodash.map(input, Number)}
+            return {numbers: _.compact(_.map(input, (str) => {
+              const num = Number(str);
+              return isNaN(num) ? null : num;
+            }))}
           }
 
           export function isValidOperation(operation) {
-            return lodash.includes(['add', 'subtract', 'multiply', 'divide'], operation)
+            return _.includes(['add', 'subtract', 'multiply', 'divide'], operation)
           }

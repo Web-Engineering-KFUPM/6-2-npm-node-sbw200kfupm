@@ -271,3 +271,4 @@ export function divide(numbers) {
     result: rest.reduce((acc, num) => acc / num, first)
   };
 }
+
